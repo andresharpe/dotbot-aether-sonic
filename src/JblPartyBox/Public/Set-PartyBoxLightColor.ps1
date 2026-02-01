@@ -6,6 +6,7 @@ function Set-PartyBoxLightColor {
     .DESCRIPTION
         Sends a simple color command (AA 33 06 00 32 03 [R] [G] [B]).
         Can specify RGB values directly or use a named color preset.
+        By default, sets Static color mode and Freeze pattern for solid color display.
 
     .PARAMETER Red
         Red channel value (0-255).
@@ -20,11 +21,18 @@ function Set-PartyBoxLightColor {
         A named color preset. Valid values: Red, Green, Blue, Orange, Yellow, Purple,
         Cyan, White, Pink, Lime, Teal, Magenta.
 
+    .PARAMETER KeepCurrentPattern
+        If specified, does not change the current pattern or color mode.
+        By default, sets Static mode and Freeze pattern for solid color.
+
     .EXAMPLE
         Set-PartyBoxLightColor -Red 255 -Green 0 -Blue 0
 
     .EXAMPLE
         Set-PartyBoxLightColor -Color Red
+
+    .EXAMPLE
+        Set-PartyBoxLightColor -Color Blue -KeepCurrentPattern
     #>
 
     [CmdletBinding(DefaultParameterSetName = 'RGB')]
@@ -43,7 +51,10 @@ function Set-PartyBoxLightColor {
 
         [Parameter(Mandatory, ParameterSetName = 'Preset', Position = 0)]
         [ValidateSet('Red', 'Green', 'Blue', 'Orange', 'Yellow', 'Purple', 'Cyan', 'White', 'Pink', 'Lime', 'Teal', 'Magenta')]
-        [string]$Color
+        [string]$Color,
+
+        [Parameter()]
+        [switch]$KeepCurrentPattern
     )
 
     Test-PartyBoxSession -Throw
@@ -53,6 +64,13 @@ function Set-PartyBoxLightColor {
         $Red = $rgb[0]
         $Green = $rgb[1]
         $Blue = $rgb[2]
+    }
+
+    # Set Freeze pattern and Static mode for solid color unless keeping current
+    if (-not $KeepCurrentPattern) {
+        Write-Verbose "Setting Freeze pattern and Static mode for solid color"
+        Set-PartyBoxLightPattern -Pattern Freeze
+        Set-PartyBoxColorMode -Mode Static
     }
 
     Write-Verbose "Setting color to RGB($Red, $Green, $Blue)"

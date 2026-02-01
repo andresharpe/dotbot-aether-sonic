@@ -106,17 +106,16 @@ Describe 'Comprehensive Walkthrough' -Skip:(-not $script:DiscoveredDevice) {
     Context 'Named Colors' {
         BeforeAll {
             # Re-enable lights and zones after pattern tests (which ended with Off)
-            # Use Neon pattern - colors work with this pattern
+            # Set-PartyBoxLightColor now auto-sets Static+Freeze, so just enable lights/zones
             Enable-PartyBoxLight
             Set-PartyBoxLightZone -Zone Eight -Enabled $true
             Set-PartyBoxLightZone -Zone SideRing -Enabled $true
             Set-PartyBoxLightZone -Zone Edge -Enabled $true
             Set-PartyBoxLightZone -Zone Stripe -Enabled $true
-            Set-PartyBoxLightPattern -Pattern Neon
             Start-Sleep -Milliseconds $script:StepDelay
         }
 
-        It 'Should set color: Red' {
+        It 'Should set color: Red (with auto Static+Freeze)' {
             Write-Host "Setting color: Red"
             Set-PartyBoxLightColor -Color Red
             Start-Sleep -Milliseconds $script:StepDelay
@@ -124,67 +123,67 @@ Describe 'Comprehensive Walkthrough' -Skip:(-not $script:DiscoveredDevice) {
 
         It 'Should set color: Green' {
             Write-Host "Setting color: Green"
-            Set-PartyBoxLightColor -Color Green
+            Set-PartyBoxLightColor -Color Green -KeepCurrentPattern
             Start-Sleep -Milliseconds $script:StepDelay
         }
 
         It 'Should set color: Blue' {
             Write-Host "Setting color: Blue"
-            Set-PartyBoxLightColor -Color Blue
+            Set-PartyBoxLightColor -Color Blue -KeepCurrentPattern
             Start-Sleep -Milliseconds $script:StepDelay
         }
 
         It 'Should set color: Orange' {
             Write-Host "Setting color: Orange"
-            Set-PartyBoxLightColor -Color Orange
+            Set-PartyBoxLightColor -Color Orange -KeepCurrentPattern
             Start-Sleep -Milliseconds $script:StepDelay
         }
 
         It 'Should set color: Yellow' {
             Write-Host "Setting color: Yellow"
-            Set-PartyBoxLightColor -Color Yellow
+            Set-PartyBoxLightColor -Color Yellow -KeepCurrentPattern
             Start-Sleep -Milliseconds $script:StepDelay
         }
 
         It 'Should set color: Purple' {
             Write-Host "Setting color: Purple"
-            Set-PartyBoxLightColor -Color Purple
+            Set-PartyBoxLightColor -Color Purple -KeepCurrentPattern
             Start-Sleep -Milliseconds $script:StepDelay
         }
 
         It 'Should set color: Cyan' {
             Write-Host "Setting color: Cyan"
-            Set-PartyBoxLightColor -Color Cyan
+            Set-PartyBoxLightColor -Color Cyan -KeepCurrentPattern
             Start-Sleep -Milliseconds $script:StepDelay
         }
 
         It 'Should set color: White' {
             Write-Host "Setting color: White"
-            Set-PartyBoxLightColor -Color White
+            Set-PartyBoxLightColor -Color White -KeepCurrentPattern
             Start-Sleep -Milliseconds $script:StepDelay
         }
 
         It 'Should set color: Pink' {
             Write-Host "Setting color: Pink"
-            Set-PartyBoxLightColor -Color Pink
+            Set-PartyBoxLightColor -Color Pink -KeepCurrentPattern
             Start-Sleep -Milliseconds $script:StepDelay
         }
 
         It 'Should set color: Lime' {
             Write-Host "Setting color: Lime"
-            Set-PartyBoxLightColor -Color Lime
+            Set-PartyBoxLightColor -Color Lime -KeepCurrentPattern
             Start-Sleep -Milliseconds $script:StepDelay
         }
 
         It 'Should set color: Teal' {
             Write-Host "Setting color: Teal"
-            Set-PartyBoxLightColor -Color Teal
+            Set-PartyBoxLightColor -Color Teal -KeepCurrentPattern
             Start-Sleep -Milliseconds $script:StepDelay
         }
 
         It 'Should set color: Magenta' {
             Write-Host "Setting color: Magenta"
-            Set-PartyBoxLightColor -Color Magenta
+            Set-PartyBoxLightColor -Color Magenta -KeepCurrentPattern
             Start-Sleep -Milliseconds $script:StepDelay
         }
     }
