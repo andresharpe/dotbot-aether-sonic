@@ -1,0 +1,6 @@
+package kotlin.io.path;
+
+/* renamed from: kotlin.io.path.d0, reason: case insensitive filesystem */
+/* loaded from: classes2.dex */
+public final /* synthetic */ class C2132d0 {
+}

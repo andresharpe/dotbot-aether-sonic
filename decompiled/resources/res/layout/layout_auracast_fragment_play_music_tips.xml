@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ptb_bg_layout_raduis_24dp_outer_space"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/ic_white_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_32dp"
+        android:layout_marginTop="@dimen/dimen_40dp"
+        android:layout_marginBottom="@dimen/dimen_32dp"
+        android:src="0x7f07023b"
+        app:layout_constraintBottom_toTopOf="@+id/tv_tips"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="@dimen/font_14sp"
+        android:textColor="@color/white"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_40dp"
+        android:layout_marginRight="@dimen/dimen_40dp"
+        android:layout_marginBottom="@dimen/dimen_40dp"
+        android:minHeight="@dimen/dimen_56dp"
+        android:text="@string/start_party_tips"
+        android:maxLines="3"
+        app:font="@font/opensans_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_white_dots"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

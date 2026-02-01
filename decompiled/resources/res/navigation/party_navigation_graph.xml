@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/party_navigation_graph"
+    app:startDestination="@+id/auracastFragment">
+    <fragment
+        android:label="AuracastFragment"
+        android:name="com.harman.jbl.partybox.ui.party.auracast.AuracastFragment"
+        android:id="@+id/auracastFragment">
+        <action
+            android:id="@+id/toPermissionAndAccess"
+            app:destination="@+id/permissionAndAccessFragment"
+            app:popUpTo="@+id/auracastFragment">
+            <argument
+                android:name="from"
+                android:defaultValue="0"/>
+        </action>
+        <action
+            android:id="@+id/action_to_webviewQAFragment"
+            app:destination="@+id/webviewQAFragment"
+            app:popUpTo="@+id/auracastFragment">
+            <argument
+                android:name="loadUrl"
+                app:argType="string"
+                app:nullable="false"/>
+        </action>
+    </fragment>
+    <dialog
+        android:label="PermissionAndAccessDialogFragment"
+        android:name="com.harman.jbl.partybox.ui.permissions.PermissionAndAccessFragment"
+        android:id="@+id/permissionAndAccessFragment">
+        <argument
+            android:name="from"
+            android:defaultValue="0"/>
+    </dialog>
+    <fragment
+        android:label="webviewQAFragment"
+        android:name="com.harman.jbl.partybox.ui.party.auracast.AuracastWebviewFragment"
+        android:id="@+id/webviewQAFragment">
+        <argument
+            android:name="loadUrl"
+            app:argType="string"
+            app:nullable="false"/>
+    </fragment>
+</navigation>

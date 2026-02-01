@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/layout_h_margin"
+    android:paddingEnd="@dimen/layout_h_margin">
+    <TextView
+        android:textAppearance="@style/DialogTheme.TitleText"
+        android:textColor="@color/fg_primary"
+        android:gravity="start"
+        android:id="@+id/pagerTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textAppearance="@style/DialogTheme.SubTitleText"
+        android:textColor="#ccffffff"
+        android:gravity="start"
+        android:id="@+id/pagerDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_18dp"
+        android:lineSpacingMultiplier="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagerTitle"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/pagerAnimation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        app:layout_constraintDimensionRatio="H,1500:1280"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagerDesc"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="dashboard_tutorial1.json"
+        app:lottie_imageAssetsFolder="images/"
+        app:lottie_loop="true"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

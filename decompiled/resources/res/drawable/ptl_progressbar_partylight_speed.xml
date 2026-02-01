@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:gravity="center"
+        android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/dimen_30dp"/>
+            <size android:height="@dimen/dimen_4dp"/>
+            <solid android:color="#cc3e4355"/>
+        </shape>
+    </item>
+    <item
+        android:gravity="center"
+        android:id="@android:id/progress">
+        <scale android:scaleWidth="100%">
+            <selector>
+                <item>
+                    <shape android:shape="rectangle">
+                        <corners android:radius="@dimen/dimen_30dp"/>
+                        <size android:height="@dimen/dimen_4dp"/>
+                        <solid android:color="#5147e5"/>
+                    </shape>
+                </item>
+            </selector>
+        </scale>
+    </item>
+    <item
+        android:gravity="center"
+        android:height="@dimen/dimen_8dp"
+        android:width="@dimen/dimen_8dp"
+        android:drawable="@drawable/ptl_thumb_speed_progressbar"/>
+    <item
+        android:gravity="center"
+        android:height="@dimen/dimen_8dp"
+        android:width="@dimen/dimen_8dp"
+        android:drawable="@drawable/ptl_thumb_speed_progressbar"/>
+    <item
+        android:gravity="center"
+        android:height="@dimen/dimen_8dp"
+        android:width="@dimen/dimen_8dp"
+        android:drawable="@drawable/ptl_thumb_speed_progressbar"/>
+</layer-list>

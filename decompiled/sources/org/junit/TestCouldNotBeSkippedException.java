@@ -1,0 +1,12 @@
+package org.junit;
+
+/* loaded from: classes2.dex */
+public class TestCouldNotBeSkippedException extends RuntimeException {
+
+    /* renamed from: E, reason: collision with root package name */
+    private static final long f55491E = 1;
+
+    public TestCouldNotBeSkippedException(org.junit.internal.AssumptionViolatedException assumptionViolatedException) {
+        super("Test could not be skipped due to other failures", assumptionViolatedException);
+    }
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="@dimen/font_16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/whats_new_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="@string/str_whats_new"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="@dimen/font_16sp"
+        android:textColor="@color/blue_grey_300"
+        android:id="@+id/release_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whats_new_text"/>
+    <TextView
+        android:textSize="@dimen/font_16sp"
+        android:textColor="@color/teal_a200"
+        android:id="@+id/learn_mo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/release_note"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

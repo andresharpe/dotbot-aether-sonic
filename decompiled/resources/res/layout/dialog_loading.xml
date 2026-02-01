@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/cpi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorColor="@color/white"
+        app:indicatorInset="0dp"
+        app:indicatorSize="@dimen/dimen_56dp"
+        style="@style/Widget.Material3.CircularProgressIndicator.Small"/>
+    <TextView
+        android:textSize="@dimen/font_16sp"
+        android:textColor="@color/white"
+        android:id="@+id/tvChecking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:text="loading..."/>
+</LinearLayout>

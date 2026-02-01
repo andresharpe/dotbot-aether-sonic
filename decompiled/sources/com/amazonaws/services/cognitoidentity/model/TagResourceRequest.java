@@ -1,0 +1,133 @@
+package com.amazonaws.services.cognitoidentity.model;
+
+import com.amazonaws.b;
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
+
+/* loaded from: classes.dex */
+public class TagResourceRequest extends b implements Serializable {
+
+    /* renamed from: J, reason: collision with root package name */
+    private String f24046J;
+
+    /* renamed from: K, reason: collision with root package name */
+    private Map<String, String> f24047K;
+
+    public boolean equals(Object obj) {
+        boolean z3;
+        boolean z4;
+        boolean z5;
+        boolean z6;
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || !(obj instanceof TagResourceRequest)) {
+            return false;
+        }
+        TagResourceRequest tagResourceRequest = (TagResourceRequest) obj;
+        if (tagResourceRequest.s() == null) {
+            z3 = true;
+        } else {
+            z3 = false;
+        }
+        if (s() == null) {
+            z4 = true;
+        } else {
+            z4 = false;
+        }
+        if (z3 ^ z4) {
+            return false;
+        }
+        if (tagResourceRequest.s() != null && !tagResourceRequest.s().equals(s())) {
+            return false;
+        }
+        if (tagResourceRequest.t() == null) {
+            z5 = true;
+        } else {
+            z5 = false;
+        }
+        if (t() == null) {
+            z6 = true;
+        } else {
+            z6 = false;
+        }
+        if (z5 ^ z6) {
+            return false;
+        }
+        if (tagResourceRequest.t() == null || tagResourceRequest.t().equals(t())) {
+            return true;
+        }
+        return false;
+    }
+
+    public int hashCode() {
+        int hashCode;
+        int i4 = 0;
+        if (s() == null) {
+            hashCode = 0;
+        } else {
+            hashCode = s().hashCode();
+        }
+        int i5 = (hashCode + 31) * 31;
+        if (t() != null) {
+            i4 = t().hashCode();
+        }
+        return i5 + i4;
+    }
+
+    public TagResourceRequest q(String str, String str2) {
+        if (this.f24047K == null) {
+            this.f24047K = new HashMap();
+        }
+        if (!this.f24047K.containsKey(str)) {
+            this.f24047K.put(str, str2);
+            return this;
+        }
+        throw new IllegalArgumentException("Duplicated keys (" + str.toString() + ") are provided.");
+    }
+
+    public TagResourceRequest r() {
+        this.f24047K = null;
+        return this;
+    }
+
+    public String s() {
+        return this.f24046J;
+    }
+
+    public Map<String, String> t() {
+        return this.f24047K;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{");
+        if (s() != null) {
+            sb.append("ResourceArn: " + s() + ",");
+        }
+        if (t() != null) {
+            sb.append("Tags: " + t());
+        }
+        sb.append("}");
+        return sb.toString();
+    }
+
+    public void u(String str) {
+        this.f24046J = str;
+    }
+
+    public void w(Map<String, String> map) {
+        this.f24047K = map;
+    }
+
+    public TagResourceRequest x(String str) {
+        this.f24046J = str;
+        return this;
+    }
+
+    public TagResourceRequest y(Map<String, String> map) {
+        this.f24047K = map;
+        return this;
+    }
+}

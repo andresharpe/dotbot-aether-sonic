@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/dimen_8dp"
+    android:paddingBottom="@dimen/dimen_8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/dimen_8dp">
+    <ImageView
+        android:id="@+id/app_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ptl_ic_back"
+        android:paddingStart="@dimen/dimen_5dp"
+        android:paddingEnd="@dimen/dimen_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="@dimen/font_18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/deviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/turn_off_button"
+        app:layout_constraintStart_toEndOf="@+id/app_menu_button"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/turn_off_button"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dimen_20dp"
+        android:paddingEnd="@dimen/dimen_5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

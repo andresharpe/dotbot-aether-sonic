@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_grey_oval"
+    android:layout_width="@dimen/device_panel_diameter"
+    android:layout_height="@dimen/device_panel_diameter">
+    <RelativeLayout
+        android:padding="@dimen/dimen_20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <View
+            android:id="@+id/device_panel_wave_cicle_2"
+            android:background="@drawable/wave_original_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:id="@+id/device_panel_wave_cicel_1"
+            android:background="@drawable/wave_original_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/back"
+        android:visibility="visible"
+        android:layout_width="@dimen/dimen_44dp"
+        android:layout_height="@dimen/dimen_44dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.harman.jbl.partybox.ui.customviews.HmCustomFontTextView
+        android:textAppearance="@style/TextAppearance.AppCompat.PartyBoxTitle"
+        android:gravity="center"
+        android:id="@+id/header_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/header_title_top_margin"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/opensans_extrabold"
+        android:layout_marginStart="@dimen/dimen_60dp"
+        android:layout_marginEnd="@dimen/dimen_60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/action"
+        android:padding="@dimen/dimen_10dp"
+        android:visibility="gone"
+        android:layout_width="@dimen/dimen_44dp"
+        android:layout_height="@dimen/dimen_44dp"
+        android:src="@drawable/ic_revers_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,191 @@
+package com.harman.jbl.partybox.ui.micota;
+
+import android.os.Bundle;
+import androidx.annotation.InterfaceC0567j;
+import androidx.annotation.N;
+import androidx.navigation.I;
+import com.harman.jbl.partybox.j;
+import java.util.HashMap;
+
+/* loaded from: classes2.dex */
+public class p {
+
+    /* loaded from: classes2.dex */
+    public static class a implements I {
+
+        /* renamed from: a, reason: collision with root package name */
+        private final HashMap f44311a;
+
+        @N
+        public String a() {
+            return (String) this.f44311a.get("deviceFirmwareKey");
+        }
+
+        @N
+        public String b() {
+            return (String) this.f44311a.get("devicePid");
+        }
+
+        @N
+        public String c() {
+            return (String) this.f44311a.get("productNameKey");
+        }
+
+        @N
+        public String d() {
+            return (String) this.f44311a.get("serverFirmwareKey");
+        }
+
+        @N
+        public a e(@N String str) {
+            if (str != null) {
+                this.f44311a.put("deviceFirmwareKey", str);
+                return this;
+            }
+            throw new IllegalArgumentException("Argument \"deviceFirmwareKey\" is marked as non-null but was passed a null value.");
+        }
+
+        public boolean equals(Object obj) {
+            if (this == obj) {
+                return true;
+            }
+            if (obj == null || getClass() != obj.getClass()) {
+                return false;
+            }
+            a aVar = (a) obj;
+            if (this.f44311a.containsKey("productNameKey") != aVar.f44311a.containsKey("productNameKey")) {
+                return false;
+            }
+            if (c() == null ? aVar.c() != null : !c().equals(aVar.c())) {
+                return false;
+            }
+            if (this.f44311a.containsKey("serverFirmwareKey") != aVar.f44311a.containsKey("serverFirmwareKey")) {
+                return false;
+            }
+            if (d() == null ? aVar.d() != null : !d().equals(aVar.d())) {
+                return false;
+            }
+            if (this.f44311a.containsKey("deviceFirmwareKey") != aVar.f44311a.containsKey("deviceFirmwareKey")) {
+                return false;
+            }
+            if (a() == null ? aVar.a() != null : !a().equals(aVar.a())) {
+                return false;
+            }
+            if (this.f44311a.containsKey("devicePid") != aVar.f44311a.containsKey("devicePid")) {
+                return false;
+            }
+            if (b() == null ? aVar.b() != null : !b().equals(aVar.b())) {
+                return false;
+            }
+            if (i() == aVar.i()) {
+                return true;
+            }
+            return false;
+        }
+
+        @N
+        public a f(@N String str) {
+            if (str != null) {
+                this.f44311a.put("devicePid", str);
+                return this;
+            }
+            throw new IllegalArgumentException("Argument \"devicePid\" is marked as non-null but was passed a null value.");
+        }
+
+        @N
+        public a g(@N String str) {
+            if (str != null) {
+                this.f44311a.put("productNameKey", str);
+                return this;
+            }
+            throw new IllegalArgumentException("Argument \"productNameKey\" is marked as non-null but was passed a null value.");
+        }
+
+        @Override // androidx.navigation.I
+        @N
+        public Bundle h() {
+            Bundle bundle = new Bundle();
+            if (this.f44311a.containsKey("productNameKey")) {
+                bundle.putString("productNameKey", (String) this.f44311a.get("productNameKey"));
+            } else {
+                bundle.putString("productNameKey", "");
+            }
+            if (this.f44311a.containsKey("serverFirmwareKey")) {
+                bundle.putString("serverFirmwareKey", (String) this.f44311a.get("serverFirmwareKey"));
+            } else {
+                bundle.putString("serverFirmwareKey", "");
+            }
+            if (this.f44311a.containsKey("deviceFirmwareKey")) {
+                bundle.putString("deviceFirmwareKey", (String) this.f44311a.get("deviceFirmwareKey"));
+            } else {
+                bundle.putString("deviceFirmwareKey", "");
+            }
+            if (this.f44311a.containsKey("devicePid")) {
+                bundle.putString("devicePid", (String) this.f44311a.get("devicePid"));
+            } else {
+                bundle.putString("devicePid", "");
+            }
+            return bundle;
+        }
+
+        public int hashCode() {
+            int i4;
+            int i5;
+            int i6;
+            int i7 = 0;
+            if (c() != null) {
+                i4 = c().hashCode();
+            } else {
+                i4 = 0;
+            }
+            int i8 = (i4 + 31) * 31;
+            if (d() != null) {
+                i5 = d().hashCode();
+            } else {
+                i5 = 0;
+            }
+            int i9 = (i8 + i5) * 31;
+            if (a() != null) {
+                i6 = a().hashCode();
+            } else {
+                i6 = 0;
+            }
+            int i10 = (i9 + i6) * 31;
+            if (b() != null) {
+                i7 = b().hashCode();
+            }
+            return ((i10 + i7) * 31) + i();
+        }
+
+        @Override // androidx.navigation.I
+        public int i() {
+            return j.h.f41156E0;
+        }
+
+        @N
+        public a j(@N String str) {
+            if (str != null) {
+                this.f44311a.put("serverFirmwareKey", str);
+                return this;
+            }
+            throw new IllegalArgumentException("Argument \"serverFirmwareKey\" is marked as non-null but was passed a null value.");
+        }
+
+        public String toString() {
+            return "ActionWhatsNewToMicOTAUpgradeFragment(actionId=" + i() + "){productNameKey=" + c() + ", serverFirmwareKey=" + d() + ", deviceFirmwareKey=" + a() + ", devicePid=" + b() + "}";
+        }
+
+        private a() {
+            this.f44311a = new HashMap();
+        }
+    }
+
+    private p() {
+    }
+
+    @N
+    @InterfaceC0567j
+    public static a a() {
+        return new a();
+    }
+}

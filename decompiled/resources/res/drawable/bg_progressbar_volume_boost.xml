@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="5dp"
+    android:width="256dp"
+    android:viewportWidth="256"
+    android:viewportHeight="5">
+    <path
+        android:fillColor="#000000"
+        android:pathData="M256,2.09L256,2.09A2,2 0,0 1,254 4.09L2.06,4.09A2,2 0,0 1,0.06 2.09L0.06,2.09A2,2 0,0 1,2.06 0.09L254,0.09A2,2 0,0 1,256 2.09z"
+        android:fillAlpha="0.5"/>
+    <path
+        android:fillColor="@drawable/res_0x7f070006_bg_progressbar_volume_boost__0"
+        android:pathData="M254,-0C255.1,-0 256,0.9 256,2C256,3.1 255.1,4 254,4L2,4C0.9,4 -0,3.1 -0,2C-0,0.9 0.9,-0 2,-0L254,-0Z"/>
+</vector>

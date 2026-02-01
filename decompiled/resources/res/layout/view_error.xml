@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/ptl_bg_dark_shark"
+    android:padding="@dimen/dimen_16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#ffe7502f">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dimen_20dp"
+        android:layout_height="@dimen/dimen_20dp"
+        android:src="@drawable/ptl_icon_partylight_info"
+        android:tint="@color/bg_regular"/>
+    <TextView
+        android:textSize="@dimen/font_14sp"
+        android:textColor="@color/bg_regular"
+        android:id="@+id/tvError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/dimen_16dp"/>
+</LinearLayout>

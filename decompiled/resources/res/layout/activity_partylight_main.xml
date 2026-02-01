@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.fragment.app.FragmentContainerView
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:id="@+id/nav_host_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/light_navigation_graph"/>
+    <View
+        android:id="@+id/vLock"
+        android:focusable="true"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/fabDebug"
+        android:background="@drawable/ptl_shape_max_radius"
+        android:padding="@dimen/dimen_4dp"
+        android:layout_width="@dimen/dimen_24dp"
+        android:layout_height="@dimen/dimen_24dp"
+        android:layout_margin="@dimen/dimen_12dp"
+        android:src="@drawable/ptl_ic_debug_setting"
+        android:elevation="@dimen/dimen_8dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <include
+        android:id="@+id/vError"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginRight="@dimen/dimen_16dp"
+        android:layout_marginBottom="@dimen/dimen_24dp"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        layout="@layout/view_error"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

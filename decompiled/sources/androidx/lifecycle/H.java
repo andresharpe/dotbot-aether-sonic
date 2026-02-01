@@ -1,0 +1,9 @@
+package androidx.lifecycle;
+
+@Deprecated
+/* loaded from: classes.dex */
+public interface H extends E {
+    @Override // androidx.lifecycle.E
+    @androidx.annotation.N
+    G getLifecycle();
+}

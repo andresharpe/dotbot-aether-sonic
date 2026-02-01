@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.harman.jbl.partybox.ui.customviews.HmCustomFontTextView
+        android:textSize="@dimen/font_14sp"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:id="@+id/toastTextView"
+        android:background="@drawable/cutom_toast_bg"
+        android:paddingTop="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:minHeight="@dimen/dimen_80dp"
+        android:paddingStart="@dimen/dimen_20dp"
+        android:paddingEnd="@dimen/dimen_20dp"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"/>
+</LinearLayout>

@@ -1,0 +1,215 @@
+[{
+  "name": "JBL\nSIGNATURE",
+  "description": "EQ Feature Description ",
+  "image": "ic_jbl_signature",
+  "homeImage": "ic_home_signature",
+  "defaultImage": "eq_signature",
+  "selectedImage": "selected_eq_signature",
+  "isSelected": false,
+  "theme2Image": "ic_jbl_signature_2",
+  "data": {
+    "categoryId": "SIGNATURE",
+    "displayName": "JBL SIGNATURE",
+    "sampleRate": 48000,
+    "params": [{
+      "type": "PEAKING_EQ",
+      "sampleRate": 48000,
+      "frequency": 100,
+      "gain": 0,
+      "qValue": 1
+    },
+      {
+        "type": "PEAKING_EQ",
+        "sampleRate": 48000,
+        "frequency": 1000,
+        "gain": 0,
+        "qValue": 1
+      },
+      {
+        "type": "PEAKING_EQ",
+        "sampleRate": 48000,
+        "frequency": 2000,
+        "gain": 0,
+        "qValue": 1
+      },
+      {
+        "type": "PEAKING_EQ",
+        "sampleRate": 48000,
+        "frequency": 7000,
+        "gain": 0,
+        "qValue": 1
+      },
+      {
+        "type": "PEAKING_EQ",
+        "sampleRate": 48000,
+        "frequency": 10000,
+        "gain": 0,
+        "qValue": 1
+      }
+    ]
+  }
+},
+  {
+    "name": "MOVIE",
+    "description": "EQ Feature Description ",
+    "image": "ic_movie",
+    "homeImage": "ic_home_movie",
+    "defaultImage": "eq_moive",
+    "selectedImage": "selected_eq_movie",
+    "isSelected": false,
+    "theme2Image": "ic_movie_2",
+    "data": {
+      "categoryId": "MOVIE",
+      "displayName": "MOVIE",
+      "sampleRate": 48000,
+      "params": [{
+        "type": "LOW_SHELF_FILTER",
+        "sampleRate": 48000,
+        "frequency": 150,
+        "gain": 4,
+        "qValue": 0.7
+      },
+        {
+          "type": "PEAKING_EQ",
+          "sampleRate": 48000,
+          "frequency": 250,
+          "gain": 0,
+          "qValue": 1
+        },
+        {
+          "type": "PEAKING_EQ",
+          "sampleRate": 48000,
+          "frequency": 2000,
+          "gain": 3,
+          "qValue": 1
+        },
+        {
+          "type": "HIGH_SHELF_FILTER",
+          "sampleRate": 48000,
+          "frequency": 5000,
+          "gain": 2,
+          "qValue": 0.7
+        },
+        {
+          "type": "PEAKING_EQ",
+          "sampleRate": 48000,
+          "frequency": 10000,
+          "gain": 0,
+          "qValue": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "VOCAL",
+    "description": "EQ Feature Description ",
+    "image": "ic_vocal",
+    "homeImage": "ic_home_vocal",
+    "defaultImage": "eq_vocal",
+    "selectedImage": "selected_eq_vocal",
+    "isSelected": false,
+    "theme2Image": "ic_vocal_2",
+    "data": {
+      "categoryId": "VOCAL",
+      "displayName": "VOCAL",
+      "sampleRate": 48000,
+      "params": [{
+        "type": "LOW_SHELF_FILTER",
+        "sampleRate": 48000,
+        "frequency": 80,
+        "gain": -5,
+        "qValue": 0.5
+      },
+        {
+          "type": "PEAKING_EQ",
+          "sampleRate": 48000,
+          "frequency": 1000,
+          "gain": 4,
+          "qValue": 1
+        },
+        {
+          "type": "PEAKING_EQ",
+          "sampleRate": 48000,
+          "frequency": 4000,
+          "gain": 4,
+          "qValue": 1
+        },
+        {
+          "type": "PEAKING_EQ",
+          "sampleRate": 48000,
+          "frequency": 9000,
+          "gain": -2,
+          "qValue": 0.7
+        },
+        {
+          "type": "LOW_PASS_FILTER",
+          "sampleRate": 48000,
+          "frequency": 9000,
+          "gain": 0,
+          "qValue": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "CHILL",
+    "description": "EQ Feature Description ",
+    "image": "ic_chill",
+    "homeImage": "ic_home_chill",
+    "defaultImage": "eq_chill",
+    "selectedImage": "selected_eq_chill",
+    "isSelected": false,
+    "theme2Image": "ic_chill_2",
+    "data": {
+      "categoryId": "CHILL",
+      "displayName": "CHILL",
+      "sampleRate": 48000,
+      "params": [{
+        "type": "LOW_SHELF_FILTER",
+        "sampleRate": 48000,
+        "frequency": 200,
+        "gain": -4,
+        "qValue": 0.5
+      },
+        {
+          "type": "PEAKING_EQ",
+          "sampleRate": 48000,
+          "frequency": 1000,
+          "gain": 0,
+          "qValue": 1
+        },
+        {
+          "type": "PEAKING_EQ",
+          "sampleRate": 48000,
+          "frequency": 1500,
+          "gain": -3,
+          "qValue": 1
+        },
+        {
+          "type": "HIGH_SHELF_FILTER",
+          "sampleRate": 48000,
+          "frequency": 6000,
+          "gain": -3,
+          "qValue": 0.5
+        },
+        {
+          "type": "LOW_PASS_FILTER",
+          "sampleRate": 48000,
+          "frequency": 10000,
+          "gain": 0,
+          "qValue": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "CUSTOM",
+    "description": "EQ Feature Description ",
+    "image": "ic_custom",
+    "homeImage": "ic_home_custom",
+    "defaultImage": "eq_custom",
+    "selectedImage": "selected_eq_custom",
+    "isSelected": false,
+    "theme2Image": "ic_home_custom"
+  }
+]

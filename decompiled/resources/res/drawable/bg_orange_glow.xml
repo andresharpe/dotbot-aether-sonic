@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list>
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:color="@color/transparent"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#00ec7d50"
+                android:endColor="#00fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#01ec7d50"
+                android:endColor="#01fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#02ec7d50"
+                android:endColor="#02fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#03ec7d50"
+                android:endColor="#03fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#04ec7d50"
+                android:endColor="#04fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#05ec7d50"
+                android:endColor="#05fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#06ec7d50"
+                android:endColor="#06fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#08ec7d50"
+                android:endColor="#08fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#09ec7d50"
+                android:endColor="#09fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#10ec7d50"
+                android:endColor="#10fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#13ec7d50"
+                android:endColor="#13fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <gradient
+                android:startColor="#ec7d50"
+                android:endColor="#fe5762"
+                android:angle="360"
+                android:type="linear"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#ec7d50"
+                android:endColor="#fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#30ec7d50"
+                android:endColor="#30fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/dimen_50dp"
+                android:width="@dimen/dimen_272dp"/>
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#40ec7d50"
+                android:endColor="#40fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#50ec7d50"
+                android:endColor="#50fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#55ec7d50"
+                android:endColor="#55fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#60ec7d50"
+                android:endColor="#60fe5762"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="999dp"/>
+            <padding
+                android:left="10dp"
+                android:top="@dimen/dimen_8dp"
+                android:right="10dp"
+                android:bottom="@dimen/dimen_8dp"/>
+            <solid
+                android:width="1dp"
+                android:startColor="#66ec7d50"
+                android:endColor="#66fe5762"/>
+        </shape>
+    </item>
+</layer-list>

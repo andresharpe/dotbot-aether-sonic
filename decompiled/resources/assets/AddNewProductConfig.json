@@ -1,0 +1,52 @@
+{
+  "productList": [
+    {
+      "pName": "JBL PartyBox 310",
+      "pid": "1f5d"
+    },
+    {
+      "pName": "JBL PartyBox 110",
+      "pid": "1f5f"
+    },
+    {
+      "pName": "JBL PartyBox 710",
+      "pid": "1f61"
+    },
+    {
+      "pName": "JBL PartyBox Encore",
+      "pid": "2062"
+    },
+    {
+      "pName": "JBL PartyBox Encore Essential",
+      "pid": "2063"
+    },
+    {
+      "pName": "JBL PartyBox Stage 320",
+      "pid": "20dd"
+    },
+    {
+      "pName": "JBL PartyBox Club 120",
+      "pid": "20e2"
+    },
+    {
+      "pName": "JBL PartyBox Encore 2",
+      "pid": "2118"
+    },
+    {
+      "pName": "JBL PartyBox ENC ESS 2",
+      "pid": "212e"
+    },
+    {
+      "pName": "JBL PartyBox 520",
+      "pid": "2120"
+    },
+    {
+      "pName": "JBL PartyBox 720",
+      "pid": "2156"
+    },
+    {
+      "pName": "JBL PartyBox OTG 2",
+      "pid": "215b"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+C:\Users\andre\AppData\Local\Temp\BleScanner\bin\Debug\net8.0-windows10.0.19041.0\BleScanner.exe
+C:\Users\andre\AppData\Local\Temp\BleScanner\bin\Debug\net8.0-windows10.0.19041.0\BleScanner.deps.json
+C:\Users\andre\AppData\Local\Temp\BleScanner\bin\Debug\net8.0-windows10.0.19041.0\BleScanner.runtimeconfig.json
+C:\Users\andre\AppData\Local\Temp\BleScanner\bin\Debug\net8.0-windows10.0.19041.0\BleScanner.dll
+C:\Users\andre\AppData\Local\Temp\BleScanner\bin\Debug\net8.0-windows10.0.19041.0\BleScanner.pdb
+C:\Users\andre\AppData\Local\Temp\BleScanner\bin\Debug\net8.0-windows10.0.19041.0\Microsoft.Windows.SDK.NET.dll
+C:\Users\andre\AppData\Local\Temp\BleScanner\bin\Debug\net8.0-windows10.0.19041.0\WinRT.Runtime.dll
+C:\Users\andre\AppData\Local\Temp\BleScanner\obj\Debug\net8.0-windows10.0.19041.0\BleScanner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\AppData\Local\Temp\BleScanner\obj\Debug\net8.0-windows10.0.19041.0\BleScanner.AssemblyInfoInputs.cache
+C:\Users\andre\AppData\Local\Temp\BleScanner\obj\Debug\net8.0-windows10.0.19041.0\BleScanner.AssemblyInfo.cs
+C:\Users\andre\AppData\Local\Temp\BleScanner\obj\Debug\net8.0-windows10.0.19041.0\BleScanner.csproj.CoreCompileInputs.cache
+C:\Users\andre\AppData\Local\Temp\BleScanner\obj\Debug\net8.0-windows10.0.19041.0\BleScanner.csproj.Up2Date
+C:\Users\andre\AppData\Local\Temp\BleScanner\obj\Debug\net8.0-windows10.0.19041.0\BleScanner.dll
+C:\Users\andre\AppData\Local\Temp\BleScanner\obj\Debug\net8.0-windows10.0.19041.0\refint\BleScanner.dll
+C:\Users\andre\AppData\Local\Temp\BleScanner\obj\Debug\net8.0-windows10.0.19041.0\BleScanner.pdb
+C:\Users\andre\AppData\Local\Temp\BleScanner\obj\Debug\net8.0-windows10.0.19041.0\BleScanner.genruntimeconfig.cache
+C:\Users\andre\AppData\Local\Temp\BleScanner\obj\Debug\net8.0-windows10.0.19041.0\ref\BleScanner.dll

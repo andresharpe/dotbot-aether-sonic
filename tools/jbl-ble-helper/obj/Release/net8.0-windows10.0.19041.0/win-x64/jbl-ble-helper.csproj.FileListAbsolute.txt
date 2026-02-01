@@ -1,0 +1,17 @@
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\obj\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\obj\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.AssemblyInfoInputs.cache
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\obj\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.AssemblyInfo.cs
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\obj\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.csproj.CoreCompileInputs.cache
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\bin\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.exe
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\bin\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.deps.json
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\bin\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.runtimeconfig.json
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\bin\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.dll
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\bin\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.pdb
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\bin\Release\net8.0-windows10.0.19041.0\win-x64\Microsoft.Windows.SDK.NET.dll
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\bin\Release\net8.0-windows10.0.19041.0\win-x64\WinRT.Runtime.dll
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\obj\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-.375639E3.Up2Date
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\obj\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.dll
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\obj\Release\net8.0-windows10.0.19041.0\win-x64\refint\jbl-ble-helper.dll
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\obj\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.pdb
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\obj\Release\net8.0-windows10.0.19041.0\win-x64\jbl-ble-helper.genruntimeconfig.cache
+C:\Users\andre\repos\JblPartyBox\tools\jbl-ble-helper\obj\Release\net8.0-windows10.0.19041.0\win-x64\ref\jbl-ble-helper.dll

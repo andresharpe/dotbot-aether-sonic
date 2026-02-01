@@ -1,0 +1,7 @@
+package kotlin;
+
+/* loaded from: classes2.dex */
+public final class P extends S {
+    private P() {
+    }
+}

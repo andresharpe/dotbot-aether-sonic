@@ -1,0 +1,44 @@
+[
+  {
+    "songName": "JBL Picks",
+    "songUri": "",
+    "viewType": 0,
+    "imageUri": "",
+    "isSelected": false
+  },
+  {
+    "songName": "Top 50 - Global",
+    "songUri": "spotify:playlist:37i9dQZEVXbMDoHDwVN2tF",
+    "viewType": 2,
+    "imageUri": "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg",
+    "isSelected": false
+  },
+  {
+    "songName": "Songs to Sing in the Shower",
+    "songUri": "spotify:playlist:37i9dQZF1DWSqmBTGDYngZ",
+    "viewType": 2,
+    "imageUri": "https://i.scdn.co/image/ab67706f00000003329e2c5d3104f8c6a1d16a34",
+    "isSelected": false
+  },
+  {
+    "songName": "Beast Mode",
+    "songUri": "spotify:playlist:37i9dQZF1DX76Wlfdnj7AP",
+    "viewType": 2,
+    "imageUri": "https://i.scdn.co/image/ab67706f00000003c771198277ecd33007dd2de4",
+    "isSelected": false
+  },
+  {
+    "songName": "Recently Playing on Spotify",
+    "songUri": "",
+    "viewType": 0,
+    "imageUri": "",
+    "isSelected": false
+  },
+  {
+    "songName": "Add From Spotify",
+    "songUri": "",
+    "viewType": 1,
+    "imageUri": "",
+    "isSelected": false
+  }
+]
