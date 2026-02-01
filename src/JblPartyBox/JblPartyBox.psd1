@@ -28,35 +28,33 @@
 
     # Functions to export from this module
     FunctionsToExport = @(
-        # Connection & Discovery (5)
-        'Find-PartyBoxDevice'
-        'Connect-PartyBoxDevice'
-        'Disconnect-PartyBoxDevice'
-        'Test-PartyBoxConnection'
-        'Get-PartyBoxConfiguration'
-
-        # Light Control (8)
-        'Enable-PartyBoxLight'
-        'Disable-PartyBoxLight'
-        'Set-PartyBoxLightPattern'
-        'Set-PartyBoxLightColor'
-        'Set-PartyBoxLightBrightness'
-        'Set-PartyBoxLightSpeed'
-        'Set-PartyBoxLightZone'
-        'Set-PartyBoxColorMode'
-
-        # Convenience (1)
-        'Initialize-PartyBoxLights'
-
-        # DJ Sound Effects (1)
-        'Invoke-PartyBoxSoundEffect'
-
-        # DJ Audio Filters (2)
-        'Set-PartyBoxDjFilter'
-        'Stop-PartyBoxDjFilter'
-
-        # Status & Utility (2)
-        'Get-PartyBoxLightStatus'
+        # Connection & Discovery
+        'Find-PartyBoxDevice',
+        'Connect-PartyBoxDevice',
+        'Disconnect-PartyBoxDevice',
+        'Test-PartyBoxConnection',
+        'Get-PartyBoxConfiguration',
+        # Power Control via BLE
+        'Start-PartyBoxDevice',
+        'Stop-PartyBoxDevice',
+        # Light Control
+        'Enable-PartyBoxLight',
+        'Disable-PartyBoxLight',
+        'Set-PartyBoxLightPattern',
+        'Set-PartyBoxLightColor',
+        'Set-PartyBoxLightBrightness',
+        'Set-PartyBoxLightSpeed',
+        'Set-PartyBoxLightZone',
+        'Set-PartyBoxColorMode',
+        # Convenience
+        'Initialize-PartyBoxLights',
+        # DJ Sound Effects
+        'Invoke-PartyBoxSoundEffect',
+        # DJ Audio Filters
+        'Set-PartyBoxDjFilter',
+        'Stop-PartyBoxDjFilter',
+        # Status & Utility
+        'Get-PartyBoxLightStatus',
         'Send-PartyBoxHeartbeat'
     )
 

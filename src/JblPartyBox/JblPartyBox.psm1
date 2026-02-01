@@ -142,14 +142,50 @@ function script:Invoke-BleHelper {
     return $stdout
 }
 
+function script:Find-PartyBoxBleMac {
+    <#
+    .SYNOPSIS
+        Scans for JBL PartyBox speakers via BLE and returns their BLE MAC addresses.
+    #>
+    param(
+        [int]$ScanSeconds = 5
+    )
+
+    if (-not $script:BleHelperAvailable) {
+        Write-Verbose "BLE helper not available"
+        return @()
+    }
+
+    Write-Verbose "Scanning for BLE devices for $ScanSeconds seconds..."
+    try {
+        $out = script:Invoke-BleHelper -Arguments @('scan', $ScanSeconds) -TimeoutSeconds ($ScanSeconds + 10)
+        # Parse JSON output (skip the "Scanning..." line)
+        $jsonStart = $out.IndexOf('[')
+        if ($jsonStart -ge 0) {
+            $json = $out.Substring($jsonStart)
+            $devices = $json | ConvertFrom-Json
+            # Filter for JBL PartyBox devices
+            $jblDevices = $devices | Where-Object { $_.Name -like '*JBL*PartyBox*' -or $_.Name -like '*PARTYBOX*' }
+            return $jblDevices
+        }
+        return @()
+    }
+    catch {
+        Write-Verbose "BLE scan failed: $($_.Exception.Message)"
+        return @()
+    }
+}
+
 function script:Invoke-PartyBoxBlePowerOn {
     <#
     .SYNOPSIS
         Attempts to power on the speaker via BLE using GATT write (AA 03 01 05).
+    .PARAMETER BleMacAddress
+        The BLE MAC address (from scan) to send the command to.
     #>
     param(
         [Parameter(Mandatory)]
-        [string]$RfcommDeviceId
+        [string]$BleMacAddress
     )
 
     if (-not $script:BleHelperAvailable) {
@@ -157,27 +193,62 @@ function script:Invoke-PartyBoxBlePowerOn {
         return $false
     }
 
-    # Extract remote MAC from RFCOMM DeviceId (pattern: Bluetooth#Bluetooth<local>-<remote>#RFCOMM...)
-    $mac = $null
-    if ($RfcommDeviceId -match '(?i)Bluetooth#Bluetooth[0-9a-f:]+-([0-9a-f:]+)#RFCOMM') {
-        $mac = $Matches[1]
-    }
-
-    if (-not $mac) {
-        Write-Verbose "Could not parse remote MAC address from DeviceId: $RfcommDeviceId"
-        return $false
-    }
-
-    Write-Verbose "Sending BLE power-on to $mac"
+    Write-Verbose "Sending BLE power-on to $BleMacAddress"
     try {
-        $out = script:Invoke-BleHelper -Arguments @('poweron', $mac)
+        $out = script:Invoke-BleHelper -Arguments @('poweron', $BleMacAddress)
         Write-Verbose "BLE helper output: $out"
-        return $true
+        return $out -match 'OK'
     }
     catch {
         Write-Verbose "BLE power-on failed: $($_.Exception.Message)"
         return $false
     }
+}
+
+function script:Invoke-PartyBoxBlePowerOff {
+    <#
+    .SYNOPSIS
+        Attempts to power off the speaker via BLE using GATT write (AA 03 01 04).
+    .PARAMETER BleMacAddress
+        The BLE MAC address (from scan) to send the command to.
+    #>
+    param(
+        [Parameter(Mandatory)]
+        [string]$BleMacAddress
+    )
+
+    if (-not $script:BleHelperAvailable) {
+        Write-Verbose "BLE helper not available; cannot power-off"
+        return $false
+    }
+
+    Write-Verbose "Sending BLE power-off to $BleMacAddress"
+    try {
+        $out = script:Invoke-BleHelper -Arguments @('poweroff', $BleMacAddress)
+        Write-Verbose "BLE helper output: $out"
+        return $out -match 'OK'
+    }
+    catch {
+        Write-Verbose "BLE power-off failed: $($_.Exception.Message)"
+        return $false
+    }
+}
+
+function script:Get-MacAddressFromRfcommDeviceId {
+    <#
+    .SYNOPSIS
+        Extracts the remote MAC address from an RFCOMM DeviceId.
+    #>
+    param(
+        [Parameter(Mandatory)]
+        [string]$RfcommDeviceId
+    )
+
+    # Pattern: Bluetooth#Bluetooth<local>-<remote>#RFCOMM...
+    if ($RfcommDeviceId -match '(?i)Bluetooth#Bluetooth[0-9a-f:]+-([0-9a-f:]+)#RFCOMM') {
+        return $Matches[1]
+    }
+    return $null
 }
 
 function script:Start-RfcommHelperProcess {
@@ -400,31 +471,30 @@ $MyInvocation.MyCommand.ScriptBlock.Module.OnRemove = {
 
 Export-ModuleMember -Function @(
     # Connection & Discovery
-    'Find-PartyBoxDevice'
-    'Connect-PartyBoxDevice'
-    'Disconnect-PartyBoxDevice'
-    'Test-PartyBoxConnection'
-    'Get-PartyBoxConfiguration'
-
+    'Find-PartyBoxDevice',
+    'Connect-PartyBoxDevice',
+    'Disconnect-PartyBoxDevice',
+    'Test-PartyBoxConnection',
+    'Get-PartyBoxConfiguration',
+    # Power Control via BLE
+    'Start-PartyBoxDevice',
+    'Stop-PartyBoxDevice',
     # Light Control
-    'Enable-PartyBoxLight'
-    'Disable-PartyBoxLight'
-    'Set-PartyBoxLightPattern'
-    'Set-PartyBoxLightColor'
-    'Set-PartyBoxLightBrightness'
-    'Set-PartyBoxLightSpeed'
-    'Set-PartyBoxLightZone'
-    'Set-PartyBoxColorMode'
-    'Initialize-PartyBoxLights'
-
+    'Enable-PartyBoxLight',
+    'Disable-PartyBoxLight',
+    'Set-PartyBoxLightPattern',
+    'Set-PartyBoxLightColor',
+    'Set-PartyBoxLightBrightness',
+    'Set-PartyBoxLightSpeed',
+    'Set-PartyBoxLightZone',
+    'Set-PartyBoxColorMode',
+    'Initialize-PartyBoxLights',
     # DJ Sound Effects
-    'Invoke-PartyBoxSoundEffect'
-
+    'Invoke-PartyBoxSoundEffect',
     # DJ Audio Filters
-    'Set-PartyBoxDjFilter'
-    'Stop-PartyBoxDjFilter'
-
+    'Set-PartyBoxDjFilter',
+    'Stop-PartyBoxDjFilter',
     # Status & Utility
-    'Get-PartyBoxLightStatus'
+    'Get-PartyBoxLightStatus',
     'Send-PartyBoxHeartbeat'
 )

@@ -84,7 +84,8 @@ function Connect-PartyBoxDevice {
 
             if ($shouldTryBle) {
                 Write-Verbose "Attempting BLE power-on for $DeviceName"
-                $powered = script:Invoke-PartyBoxBlePowerOn -RfcommDeviceId $DeviceId
+                $mac = script:Get-MacAddressFromRfcommDeviceId -RfcommDeviceId $DeviceId
+                $powered = if ($mac) { script:Invoke-PartyBoxBlePowerOn -MacAddress $mac } else { $false }
                 if ($powered) {
                     Start-Sleep -Seconds 3
                     Write-Verbose "Retrying RFCOMM connect after BLE power-on"
