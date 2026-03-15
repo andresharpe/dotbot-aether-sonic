@@ -16,9 +16,9 @@ The JBL PartyBox Stage 320 uses **two different Bluetooth interfaces**:
 Windows BLE enumeration (`BluetoothLEDevice.GetDeviceSelector()`) only shows paired BLE devices. To find JBL speakers, we use active BLE scanning via `BluetoothLEAdvertisementWatcher`.
 
 Scan results show the speakers advertising as "JBL PartyBox Stage 320" with rotating random BLE addresses like:
-- `45:e2:99:2a:e1:c7`
-- `68:b8:82:a5:fa:1f`
-- `68:02:f7:5a:49:92`
+- `XX:XX:XX:XX:XX:01`
+- `XX:XX:XX:XX:XX:02`
+- `XX:XX:XX:XX:XX:03`
 
 ### GATT Services Found
 From BLE service discovery on a JBL PartyBox Stage 320:
