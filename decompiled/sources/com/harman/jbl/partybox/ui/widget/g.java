@@ -1,6 +1,0 @@
-package com.harman.jbl.partybox.ui.widget;
-
-/* loaded from: classes2.dex */
-public interface g {
-    void a();
-}

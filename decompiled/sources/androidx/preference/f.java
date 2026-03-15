@@ -1,5 +1,0 @@
-package androidx.preference;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class f {
-}
