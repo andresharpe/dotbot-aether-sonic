@@ -1,179 +1,67 @@
-# JblPartyBox
+# DotBot.Aether.Sonic
 
-PowerShell module for controlling JBL PartyBox Stage 320 speakers via Bluetooth.
+Aether **Sonic** conduit — JBL PartyBox Stage 320 integration for [dotbot](https://github.com/andresharpe/dotbot-v3). Part of the [dotbot-aether](https://github.com/andresharpe/dotbot-aether) conduit plugin collection.
 
-## Features
+[![PowerShell 7.0+](https://img.shields.io/badge/PowerShell-7.0%2B-blue.svg)](https://github.com/PowerShell/PowerShell)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-- **Light Control** - Patterns, colors, brightness, speed, zones
-- **DJ Sound Effects** - 19 built-in sounds (horn, scratch, party, etc.)
-- **DJ Audio Filters** - Repeater, filter, gater, echo, wipeout
-- **Full Automation** - No app required, scriptable control
+## What It Does
 
-## Requirements
+Translates dotbot event bus events into JBL PartyBox light effects and sound cues. Controls light patterns (Neon, Loop, Bounce, Trim, Switch, Freeze, Custom), solid colors, brightness, speed, 4 light zones, 19 DJ sound effects, and 5 DJ audio filters — all via Bluetooth serial.
 
-- PowerShell 7.0+ (pwsh)
-- Windows 10/11
-- JBL PartyBox Stage 320 paired via Windows Bluetooth
-
-## Installation
-
-```powershell
-# Clone the repository
-git clone https://github.com/andresharpe/JblPartyBox.git
-
-# Import the module
-Import-Module ./src/JblPartyBox/JblPartyBox.psd1
-```
+**Platform:** Windows only (Bluetooth serial requirement).
 
 ## Quick Start
 
 ```powershell
-# Import module
-Import-Module ./src/JblPartyBox/JblPartyBox.psd1
+Import-Module ./src/DotBot.Aether.Sonic/DotBot.Aether.Sonic.psd1
 
-# Find and connect to speaker
+# Discover and connect
+Find-AetherSonic | Connect-AetherSonic
+
+# Or use the native PartyBox functions directly
 Find-PartyBoxDevice | Connect-PartyBoxDevice
-
-# Set a solid color
 Set-PartyBoxLightColor -Color Red
-
-# Change to blue
-Set-PartyBoxLightColor -Color Blue
-
-# Play a sound effect
 Invoke-PartyBoxSoundEffect -Effect Horn
-
-# Set an animated pattern
 Set-PartyBoxLightPattern -Pattern Neon
-
-# Disconnect when done
-Disconnect-PartyBoxDevice
 ```
 
-## API Reference
+## Aether Contract Functions
+
+Every Aether conduit exports these standard lifecycle functions:
+
+- `Initialize-AetherSonic` — validate config and hardware reachability
+- `Find-AetherSonic` — discover paired PartyBox speakers
+- `Connect-AetherSonic` — bond to a discovered speaker
+- `Disconnect-AetherSonic` — clean shutdown
+- `Test-AetherSonic` — health check
+- `Invoke-AetherSonicEvent` — handle an event bus event (the sink entry point)
+
+## Native Functions (21)
 
 ### Connection
+`Find-PartyBoxDevice`, `Connect-PartyBoxDevice`, `Disconnect-PartyBoxDevice`, `Test-PartyBoxConnection`, `Get-PartyBoxConfiguration`, `Start-PartyBoxDevice`, `Stop-PartyBoxDevice`, `Send-PartyBoxHeartbeat`
 
-| Function | Description |
-|----------|-------------|
-| `Find-PartyBoxDevice` | Discover paired speakers |
-| `Connect-PartyBoxDevice` | Connect to speaker |
-| `Disconnect-PartyBoxDevice` | Disconnect |
-| `Test-PartyBoxConnection` | Check connection status |
-
-### Lights
-
-| Function | Description |
-|----------|-------------|
-| `Enable-PartyBoxLight` | Turn lights on |
-| `Disable-PartyBoxLight` | Turn lights off |
-| `Set-PartyBoxLightPattern` | Set pattern (Off, Neon, Loop, Bounce, Trim, Switch, Freeze, Custom) |
-| `Set-PartyBoxLightColor` | Set color by name or RGB |
-| `Set-PartyBoxLightBrightness` | Set brightness (0-255) |
-| `Set-PartyBoxLightSpeed` | Set animation speed (0-255) |
-| `Set-PartyBoxLightZone` | Enable/disable light zones |
-| `Set-PartyBoxColorMode` | Set ColorLoop or Static mode |
+### Light Control
+`Enable-PartyBoxLight`, `Disable-PartyBoxLight`, `Initialize-PartyBoxLights`, `Set-PartyBoxLightPattern`, `Set-PartyBoxLightColor`, `Set-PartyBoxLightBrightness`, `Set-PartyBoxLightSpeed`, `Set-PartyBoxLightZone`, `Set-PartyBoxColorMode`, `Get-PartyBoxLightStatus`
 
 ### Sound & DJ
+`Invoke-PartyBoxSoundEffect`, `Set-PartyBoxDjFilter`, `Stop-PartyBoxDjFilter`
 
-| Function | Description |
-|----------|-------------|
-| `Invoke-PartyBoxSoundEffect` | Play sound (Horn, Scratch1-3, Party, etc.) |
-| `Set-PartyBoxDjFilter` | Apply filter (Repeater, Filter, Gater, Echo, Wipeout) |
-| `Stop-PartyBoxDjFilter` | Stop active filter |
+## Documentation
 
-## Examples
-
-### Solid Colors
-
-```powershell
-# Set-PartyBoxLightColor automatically uses Freeze+Static for solid colors
-Set-PartyBoxLightColor -Color Red
-Set-PartyBoxLightColor -Color Blue
-Set-PartyBoxLightColor -Color Purple
-
-# Or use RGB values
-Set-PartyBoxLightColor -Red 255 -Green 128 -Blue 0  # Orange
-```
-
-### Available Colors
-
-Red, Green, Blue, Orange, Yellow, Purple, Cyan, White, Pink, Lime, Teal, Magenta
-
-### Animated Patterns
-
-```powershell
-# Set pattern with color cycling
-Set-PartyBoxLightPattern -Pattern Neon
-Set-PartyBoxColorMode -Mode ColorLoop
-
-# Or single color animation
-Set-PartyBoxLightPattern -Pattern Loop
-Set-PartyBoxLightColor -Color Blue -KeepCurrentPattern
-```
-
-### Light Zones
-
-```powershell
-# The Stage 320 has 4 main zones
-Set-PartyBoxLightZone -Zone Eight -Enabled $true      # Figure-8 light
-Set-PartyBoxLightZone -Zone SideRing -Enabled $true   # Side dots
-Set-PartyBoxLightZone -Zone Edge -Enabled $true       # Edge strip
-Set-PartyBoxLightZone -Zone Stripe -Enabled $true     # Side panels
-```
-
-### DJ Sound Effects
-
-```powershell
-Invoke-PartyBoxSoundEffect -Effect Horn
-Invoke-PartyBoxSoundEffect -Effect Party
-Invoke-PartyBoxSoundEffect -Effect Scratch1
-Invoke-PartyBoxSoundEffect -Effect LetsGo
-```
-
-### DJ Audio Filters
-
-```powershell
-# Apply filter while music is playing
-Set-PartyBoxDjFilter -Filter Echo -Level 50
-Set-PartyBoxDjFilter -Filter Repeater -Level 75
-
-# Stop filter
-Stop-PartyBoxDjFilter
-```
+- [Protocol Specification](docs/jbl_partybox_stage_320_protocol_spec.md)
+- [Architecture](docs/architecture.md)
+- [BLE Power Control](docs/ble-power-control.md)
 
 ## Testing
 
 ```powershell
-# Run all unit tests
 Invoke-Pester ./tests/Unit
-
-# Run integration tests (requires speaker)
-Invoke-Pester ./tests/Integration
-
-# Run integration without sound effects
-Invoke-Pester ./tests/Integration -ExcludeTag 'Sound'
+Invoke-Pester ./tests/Integration           # requires speaker
+Invoke-Pester ./tests/Integration -ExcludeTag 'Sound'  # lights only
 ```
-
-## Documentation
-
-- [Protocol Specification](docs/jbl_partybox_stage_320_protocol_spec.md) - Complete command reference
-- [Architecture](docs/architecture.md) - Module design and components
-
-## Troubleshooting
-
-**Speaker not found**
-- Ensure speaker is paired in Windows Bluetooth settings
-- Close JBL PartyBox mobile app (only one controller at a time)
-
-**Connection fails**
-- Power cycle the speaker
-- Re-pair via Windows Bluetooth settings
-
-**Colors not showing correctly**
-- `Set-PartyBoxLightColor` automatically sets Freeze+Static mode
-- Use `-KeepCurrentPattern` to preserve current pattern
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE)
